@@ -7,7 +7,7 @@ export default class CounterStore {
         `Initial count is ${this.count}`
     ]
 
-    construtor() {
+    constructor() {
         makeAutoObservable(this)
     }
 
