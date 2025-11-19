@@ -16,8 +16,7 @@ public class DeleteActivity
     {
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
-            var activity = await context.Activities
-                            .FindAsync([request.Id], cancellationToken);
+            var activity = await context.Activities.FindAsync([request.Id], cancellationToken);
 
             if (activity == null) return Result<Unit>.Failure("Activity not found", 404);
 
